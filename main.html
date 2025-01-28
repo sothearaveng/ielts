@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag and Drop Exercises</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .container {
+            margin-bottom: 40px;
+        }
+
+        .instructions {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .drag-box {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .draggable {
+            padding: 10px 15px;
+            border: 2px solid #777; /* grey border */
+            border-radius: 5px;
+            background-color: #E7F3FF;
+            cursor: grab;
+            width: 100%;
+            text-align: left;
+        }
+
+        .droppable {
+            padding: 15px;
+            border: 2px dashed #777; /* grey border */
+            border-radius: 5px;
+            min-height: 50px;
+            width: 300px;
+            text-align: center;
+            background-color: #F9F9F9;
+        }
+
+        .droppable.drag-over {
+            background-color: #E6FFEA;
+        }
+
+        .question {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========================= SECTION 1 ========================= -->
+    <!-- Subsection: Questions 1-5 -->
+    <div class="container">
+        <div class="instructions">
+            <strong>Section 1 (Questions 1-10)</strong><br><br>
+            <strong>Questions 1-5</strong><br>
+            Which students can join the following activities?
+            <br><br>
+       
+        </div>
+
+        <div class="drag-box">
+            <div class="draggable" draggable="true" data-answer="A">A: All students</div>
+            <div class="draggable" draggable="true" data-answer="B">B: Beginners</div>
+            <div class="draggable" draggable="true" data-answer="C">C: Advanced students</div>
+        </div>
+
+        <div id="questions">
+            <div class="question">
+                <div>1. Non-English Language Courses</div>
+                <div class="droppable" data-question="1"></div>
+            </div>
+            <div class="question">
+                <div>2. Jazz Club</div>
+                <div class="droppable" data-question="2"></div>
+            </div>
+            <div class="question">
+                <div>3. Drama Society</div>
+                <div class="droppable" data-question="3"></div>
+            </div>
+            <div class="question">
+                <div>4. Choral Group</div>
+                <div class="droppable" data-question="4"></div>
+            </div>
+            <div class="question">
+                <div>5. Special Conversation Group</div>
+                <div class="droppable" data-question="5"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Subsection: Questions 6-10 -->
+    <div class="container">
+        <div class="instructions">
+            <strong>Questions 6-10</strong><br>
+            Choose FIVE answers from the list, and write the correct letter, A-G, next to the questions.
+          
+        </div>
+
+        <div class="drag-box">
+            <div class="draggable" draggable="true" data-answer="A">A: The bookshop</div>
+            <div class="draggable" draggable="true" data-answer="B">B: Clubs & societies</div>
+            <div class="draggable" draggable="true" data-answer="C">C: The gym</div>
+            <div class="draggable" draggable="true" data-answer="D">D: The conference room</div>
+            <div class="draggable" draggable="true" data-answer="E">E: Student Union newspaper</div>
+            <div class="draggable" draggable="true" data-answer="F">F: The union cafeteria</div>
+            <div class="draggable" draggable="true" data-answer="G">G: The union office</div>
+        </div>
+
+        <div id="questions">
+	    <div> Where can you </div>
+            <div class="question">
+		
+                <div>6. make friends?</div>
+                <div class="droppable" data-question="6"></div>
+            </div>
+            <div class="question">
+                <div>7. reduce your stress after class?</div>
+                <div class="droppable" data-question="7"></div>
+            </div>
+            <div class="question">
+                <div>8. pay reduced prices?</div>
+                <div class="droppable" data-question="8"></div>
+            </div>
+            <div class="question">
+                <div>9. place personal notices?</div>
+                <div class="droppable" data-question="9"></div>
+            </div>
+            <div class="question">
+                <div>10. obtain legal advice?</div>
+                <div class="droppable" data-question="10"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================= SECTION 2 ========================= -->
+    <!-- Subsection: Questions 11-16 -->
+    <div class="container">
+        <div class="instructions">
+            <strong>Section 2 (Questions 11-20)</strong><br><br>
+            <strong>Questions 11-16</strong><br>
+            What are the suggestions offered by the speaker?
+        </div>
+
+        <div class="drag-box">
+            <div class="draggable" draggable="true" data-answer="A">A: Get feedback from teaching staff</div>
+            <div class="draggable" draggable="true" data-answer="B">B: Do more reading</div>
+            <div class="draggable" draggable="true" data-answer="C">C: Get help from school supporting staff</div>
+            <div class="draggable" draggable="true" data-answer="D">D: Get help for nursing problems</div>
+            <div class="draggable" draggable="true" data-answer="E">E: Manage time properly</div>
+            <div class="draggable" draggable="true" data-answer="F">F: Be well prepared</div>
+            <div class="draggable" draggable="true" data-answer="G">G: Review the notes regularly</div>
+            <div class="draggable" draggable="true" data-answer="H">H: Don't set unrealistic goals</div>
+        </div>
+
+        <div id="questions">
+            <div class="question">
+                <div>11. Essays</div>
+                <div class="droppable" data-question="11"></div>
+            </div>
+            <div class="question">
+                <div>12. Lectures</div>
+                <div class="droppable" data-question="12"></div>
+            </div>
+            <div class="question">
+                <div>13. Research</div>
+                <div class="droppable" data-question="13"></div>
+            </div>
+            <div class="question">
+                <div>14. Online forum</div>
+                <div class="droppable" data-question="14"></div>
+            </div>
+            <div class="question">
+                <div>15. Placement test</div>
+                <div class="droppable" data-question="15"></div>
+            </div>
+            <div class="question">
+                <div>16. Freshmen</div>
+                <div class="droppable" data-question="16"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Subsection: Questions 17-20 -->
+    <div class="container">
+        <div class="instructions">
+            <strong>Questions 17-20</strong><br>
+            Choose 4 answers from the box and match the correct letter A-G next to question 17-20
+            <br><br>
+        </div>
+
+        <div class="drag-box">
+            <div class="draggable" draggable="true" data-answer="A">A: A one-on-one coach is bookable</div>
+            <div class="draggable" draggable="true" data-answer="B">B: It is featured in a TV drama</div>
+            <div class="draggable" draggable="true" data-answer="C">C: It is beneficial for young people</div>
+            <div class="draggable" draggable="true" data-answer="D">D: It is only available for women sometimes</div>
+            <div class="draggable" draggable="true" data-answer="E">E: It is the largest in the country</div>
+            <div class="draggable" draggable="true" data-answer="F">F: It can be booked for parties</div>
+            <div class="draggable" draggable="true" data-answer="G">G: It is a place to hold courses for school children</div>
+        </div>
+
+        <div id="questions">
+            <div class="question">
+                <div>17. Swimming Pool</div>
+                <div class="droppable" data-question="17"></div>
+            </div>
+            <div class="question">
+                <div>18. Climbing Wall</div>
+                <div class="droppable" data-question="18"></div>
+            </div>
+            <div class="question">
+                <div>19. Skating Rink</div>
+                <div class="droppable" data-question="19"></div>
+            </div>
+            <div class="question">
+                <div>20. Gym</div>
+                <div class="droppable" data-question="20"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================= SECTION 3 ========================= -->
+    <!-- Subsection: Questions 21-25 -->
+    <div class="container">
+        <div class="instructions">
+            <strong>Section 3 (Questions 21-30)</strong><br><br>
+            <strong>Questions 21-25</strong><br>
+            What is the focus of each presentation?<br>
+            Choose FIVE answers from the box and match the correct letter, A-F
+        </div>
+
+        <div class="drag-box">
+            <div class="draggable" draggable="true" data-answer="A">A: Exploring new destinations</div>
+            <div class="draggable" draggable="true" data-answer="B">B: how to make the skiing boots comfortable</div>
+            <div class="draggable" draggable="true" data-answer="C">C: how to become a ski instructor</div>
+            <div class="draggable" draggable="true" data-answer="D">D: how to combine other activities with skiing</div>
+            <div class="draggable" draggable="true" data-answer="E">E: how to improve the skills of skiing</div>
+            <div class="draggable" draggable="true" data-answer="F">F: information about skiing safety</div>
+        </div>
+
+        <div id="questions">
+            <div class="question">
+                <div>21. Simon's talk</div>
+                <div class="droppable" data-question="21"></div>
+            </div>
+            <div class="question">
+                <div>22. Solutions</div>
+                <div class="droppable" data-question="22"></div>
+            </div>
+            <div class="question">
+                <div>23. Film</div>
+                <div class="droppable" data-question="23"></div>
+            </div>
+            <div class="question">
+                <div>24. Tricks</div>
+                <div class="droppable" data-question="24"></div>
+            </div>
+            <div class="question">
+                <div>25. Jason's Talk</div>
+                <div class="droppable" data-question="25"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Subsection: Questions 26-30 -->
+    <div class="container">
+        <div class="instructions">
+            <strong>Questions 26-30</strong><br>
+            What incident is related to each of the following people? Choose FIVE answers from the box and match the correct letter, A-G with Questions 26-30
+            <br><br>
+        </div>
+
+        <div class="drag-box">
+            <div class="draggable" draggable="true" data-answer="A">A: brought tea tree oil into Australia in 1770</div>
+            <div class="draggable" draggable="true" data-answer="B">B: challenged the benefit of tea tree oil</div>
+            <div class="draggable" draggable="true" data-answer="C">C: reported the special eating habit in Australia</div>
+            <div class="draggable" draggable="true" data-answer="D">D: listed plant species</div>
+            <div class="draggable" draggable="true" data-answer="E">E: studied the tea tree oil</div>
+            <div class="draggable" draggable="true" data-answer="F">F: saw Australian Aborigines drink</div>
+            <div class="draggable" draggable="true" data-answer="G">G: used tea tree for medical treatment</div>
+        </div>
+
+        <div id="questions">
+            <div class="question">
+                <div>26. Aborigines</div>
+                <div class="droppable" data-question="26"></div>
+            </div>
+            <div class="question">
+                <div>27. Dutch explorer</div>
+                <div class="droppable" data-question="27"></div>
+            </div>
+            <div class="question">
+                <div>28. Sir Hugh Palliser</div>
+                <div class="droppable" data-question="28"></div>
+            </div>
+            <div class="question">
+                <div>29. Captain James Cook</div>
+                <div class="droppable" data-question="29"></div>
+            </div>
+            <div class="question">
+                <div>30. Dr. Arthur Penfold</div>
+                <div class="droppable" data-question="30"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================= SECTION 4 ========================= -->
+    <!-- Subsection: Questions 31-36 -->
+    <div class="container">
+        <div class="instructions">
+            <strong>Section 4 (Questions 31-40)</strong><br><br>
+            <strong>Questions 31-36</strong><br>
+            What does the organiser tell the members about who should do each of the following tasks?
+            <br><br>
+        </div>
+
+        <div class="drag-box">
+            <div class="draggable" draggable="true" data-answer="A">A: All the members must do it.</div>
+            <div class="draggable" draggable="true" data-answer="B">B: Members have the opinion of doing it.</div>
+            <div class="draggable" draggable="true" data-answer="C">C: The organiser is responsible for doing it.</div>
+        </div>
+
+        <div id="questions">
+            <div class="question">
+                <div>31. Taking tents</div>
+                <div class="droppable" data-question="31"></div>
+            </div>
+            <div class="question">
+                <div>32. Booking campsites</div>
+                <div class="droppable" data-question="32"></div>
+            </div>
+            <div class="question">
+                <div>33. Taking bicycles</div>
+                <div class="droppable" data-question="33"></div>
+            </div>
+            <div class="question">
+                <div>34. Buying train tickets</div>
+                <div class="droppable" data-question="34"></div>
+            </div>
+            <div class="question">
+                <div>35. Buying tickets for a football match</div>
+                <div class="droppable" data-question="35"></div>
+            </div>
+            <div class="question">
+                <div>36. Collecting information about the area of the tour</div>
+                <div class="droppable" data-question="36"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Subsection: Questions 37-40 -->
+    <div class="container">
+        <div class="instructions">
+            <strong>Questions 37-40</strong><br>
+            Which location has the following attraction?
+            <br><br>
+        </div>
+
+        <div class="drag-box">
+            <div class="draggable" draggable="true" data-answer="A">A: farming museum</div>
+            <div class="draggable" draggable="true" data-answer="B">B: horseriding</div>
+            <div class="draggable" draggable="true" data-answer="C">C: locally produced food</div>
+            <div class="draggable" draggable="true" data-answer="D">D: market selling clothes</div>
+            <div class="draggable" draggable="true" data-answer="E">E: old ruins</div>
+            <div class="draggable" draggable="true" data-answer="F">F: steam railway</div>
+            <div class="draggable" draggable="true" data-answer="G">G: transport museum</div>
+            <div class="draggable" draggable="true" data-answer="H">H: water sports</div>
+        </div>
+
+        <div id="questions">
+            <div class="question">
+                <div>37. St. Andrews</div>
+                <div class="droppable" data-question="37"></div>
+            </div>
+            <div class="question">
+                <div>38. Cluny</div>
+                <div class="droppable" data-question="38"></div>
+            </div>
+            <div class="question">
+                <div>39. Pennerley</div>
+                <div class="droppable" data-question="39"></div>
+            </div>
+            <div class="question">
+                <div>40. Farlow</div>
+                <div class="droppable" data-question="40"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const draggables = document.querySelectorAll('.draggable');
+        const droppables = document.querySelectorAll('.droppable');
+
+        draggables.forEach(draggable => {
+            draggable.addEventListener('dragstart', () => {
+                draggable.classList.add('dragging');
+            });
+
+            draggable.addEventListener('dragend', () => {
+                draggable.classList.remove('dragging');
+            });
+        });
+
+        droppables.forEach(droppable => {
+            droppable.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                droppable.classList.add('drag-over');
+            });
+
+            droppable.addEventListener('dragleave', () => {
+                droppable.classList.remove('drag-over');
+            });
+
+            droppable.addEventListener('drop', (e) => {
+                e.preventDefault();
+                const draggable = document.querySelector('.dragging');
+                if (draggable) {
+                    // Assign the text & data-answer to this droppable
+                    droppable.textContent = draggable.textContent;
+                    droppable.dataset.answer = draggable.dataset.answer;
+                    droppable.classList.remove('drag-over');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
